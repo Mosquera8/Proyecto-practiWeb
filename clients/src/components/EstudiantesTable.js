@@ -6,26 +6,74 @@ import MUIDataTable from "mui-datatables";
 
 
 export default function EstudiantesTable() {
-    const columns = ["Name", "Company", "City", "State"];
+    //const columns = ["Codigo","Nombre", "Materias core", "Programa"];
+    const columns = [
+        {
+         name: "codigo",
+         label: "Codigo",
+         options: {
+          filter: false,
+          sort: false,
+         }
+        },
+        {
+         name: "nombre",
+         label: "Nombre",
+         options: {
+          filter: false,
+          sort: false,
+         }
+        },
+        {
+         name: "prerrequisitos",
+         label: "Prerrequisitos",
+         options: {
+          filter: true,
+          sort: false,
+         }
+        },
+        {
+         name: "programa",
+         label: "Programa",
+         options: {
+          filter: true,
+          sort: false,
+         }
+        },
+       ];
+       
     const data = [
-        ["Joe James", "Test Corp", "Yonkers", "NY"],
-        ["John Walsh", "Test Corp", "Hartford", "CT"],
-        ["Bob Herm", "Test Corp", "Tampa", "FL"],
-        ["James Houston", "Test Corp", "Dallas", "TX"],
+        [3003429,"Joe James", true, "Sistemas"],
+        [1287734,"John Walsh", false, "Multimedia"],
+        [1344768,"Bob Herm", true, "Sistemas"],
+        [1276355,"James Houston", true, "Electronica"],
     ];
     const options = {
-        filterType: 'checkbox',
-        BottomNavigation: 'aprobar'
+        filterType: 'checkbox',   
     };
     return (
         <Grid container direction={'row'} alignItems={'center'} justifyContent={'center'}>
             <Grid item xs={12}>
-                <Card sx={{mt: 5}} style={{color:'#023047'}}>
-                    <Typography style={{fontWeight:'bold'}}> Tabla de Aprobación</Typography>
+                <Card sx={{mt: 5}} style={{color:'#023047',backgroundColor:'#219ebc'}}>
+                    <Typography  style={{fontWeight:'bold'}}> Tabla de Aprobación</Typography>
                     <CardContent>
 
                         <MUIDataTable
-                            title={"Employee List"}
+                            title={"Lista Estudiantes"}
+                            data={data}
+                            columns={columns}
+                            options={options}
+                        />
+                    </CardContent>
+
+                </Card>
+
+                <Card sx={{mt: 5}} style={{color:'#023047',backgroundColor:'#219ebc'}}>
+                    <Typography  style={{fontWeight:'bold'}}> Tabla prerrequisitos</Typography>
+                    <CardContent>
+
+                        <MUIDataTable
+                            title={"Lista Estudiantes"}
                             data={data}
                             columns={columns}
                             options={options}

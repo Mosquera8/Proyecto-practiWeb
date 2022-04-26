@@ -11,9 +11,9 @@ export default function NavBar() {
             <Container>
                 <Toolbar>
                     <Typography variant='h3' sx={{ flexGrow: 1}}>
-                        <Link to="/" style={{textDecoration:'none', color:'white'}}>PractiWeb</Link>
+                        <Link to="/" style={{textDecoration:'none', color:'#023047'}}>PractiWeb</Link>
                     </Typography>
-                    <Button variant='contained' color='secondary' onClick={()=> navigate("/tablaEstudiantes/new")}>
+                    <Button variant='contained' style={{backgroundColor:'#fb8500'}} onClick={()=> navigate("/tablaEstudiantes/new")}>
                         Agragar Estudiantes
                     </Button>
                 </Toolbar>
