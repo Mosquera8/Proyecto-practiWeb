@@ -139,7 +139,6 @@ export default function EstudiantesTable() {
                 <Card sx={{ mt: 5 }} style={{ color: '#023047', backgroundColor: '#219ebc' }}>
                     <Typography sx={{ml:3}} style={{ fontWeight: 'bold' }}> Tabla prerrequisitos</Typography>
                     <CardContent>
-
                         <MUIDataTable
                             title={"Prerrequisitos"}
                             data={data2}
@@ -147,8 +146,8 @@ export default function EstudiantesTable() {
                             options={options2}
                         />
                     </CardContent>
-
                 </Card>
+                
             </Grid>
         </Grid>
     )
