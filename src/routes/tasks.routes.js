@@ -11,15 +11,15 @@ router.get('/tasks',async (req, res) => {
 })
 
 router.post('/tasks',(req, res) => {
-    res.send('post lista de tareas');
+    res.send('post lista de estudiantes');
 })
 
 router.delete('/tasks',(req, res) => {
-    res.send('delete lista de tareas');
+    res.send('delete lista de estudiantes');
 })
 
 router.put('/tasks',(req, res) => {
-    res.send('put/updating lista de tareas');
+    res.send('put/updating lista de estudiantes');
 })
 
 module.exports = router;
